@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universitas Gajayana Malang</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 340px;
+            background: #0284c7;
+            z-index: -1;
+            border-bottom-left-radius: 30% 60px;
+            border-bottom-right-radius: 30% 60px;
+        }
+
+        @media (max-width: 900px) {
+            body::before {
+                height: 220px;
+                border-bottom-left-radius: 40% 40px;
+                border-bottom-right-radius: 40% 40px;
+            }
+        }
+
+        .header {
+            background: #0284c7;
+            padding: 0;
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+            height: 70px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            gap: 12px;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: 40px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            color: white;
+            font-weight: bold;
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            color: white;
+            align-items: center;
+            height: 100%;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 0;
+            transition: border-bottom 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-links a:hover {
+            border-bottom: 2px solid #fff;
+        }
+
+        .pmb-btn {
+            display: flex;
+            align-items: center;
+            background: white;
+            color: #0284c7;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 10px;
+            border: none;
+            transition: background 0.2s, color 0.2s;
+            gap: 8px;
+        }
+
+        .pmb-icon {
+            font-size: 18px;
+            margin-right: 4px;
+        }
+
+        .pmb-text {
+            font-size: 16px;
+            font-weight: bold;
+            color: #111;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .main-banner {
+            width: 100%;
+            height: 400px;
+            background: #e5e7eb;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 24px;
+            color: #666;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .main-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .welcome-section {
+            max-width: 900px;
+            margin-left: 0;
+            margin-right: auto;
+            padding-left: 0;
+            text-align: left;
+            width: 100%;
+        }
+
+        .welcome-title {
+            color: #111;
+            font-size: 36px;
+            margin-bottom: 30px;
+            text-align: left;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+
+        .services {
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .service-item {
+            background: white;
+            padding: 32px 24px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #0ea5e9;
+            min-width: 180px;
+            max-width: 220px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+            overflow: hidden;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+
+        .service-icon {
+            width: 54px;
+            height: 54px;
+            font-size: 32px;
+            margin: 0 0 8px 0;
+            background: #e0f2fe;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0284c7;
+        }
+
+        .service-item div:last-child {
+            font-size: 18px;
+            font-weight: 500;
+            color: #111;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 100%;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            .main-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .services {
+                flex-direction: column;
+                gap: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="nav">
+            <div class="logo">
+                <img src="LOGO-UNIGA.png" alt="Logo UNIGA Malang" class="logo-img">
+                <span class="logo-text">UNIGA MALANG</span>
+            </div>
+            <div class="nav-links">
+                <a href="#">HOME</a>
+                <a href="#">FAKULTAS</a>
+                <a href="#">AKADEMIK</a>
+                <a href="#">AKREDITASI</a>
+                <a href="#">RPL</a>
+                <a href="#" class="pmb-btn">
+                    <span class="pmb-icon">📢</span>
+                    <span class="pmb-text">PMB</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="main-banner">
+            <img src="HUT RI 2025.png" alt="Banner HUT RI">
+        </div>
+
+        <div class="welcome-section">
+            <h1 class="welcome-title"><b>Selamat Datang di Universitas Gajayana</b></h1>
+            <div class="services">
+                <div class="service-item">
+                    <div class="service-icon">🏛️</div>
+                    <div>Program studi</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🎓</div>
+                    <div>Beasiswa</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">📜</div>
+                    <div>Akreditasi</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">📢</div>
+                    <div>PMB</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
