@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emanate Template</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      background: #fff;
+      border-radius: 0 0 18px 18px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    header nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    header nav a.btn {
+      background: #6c63ff;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 6px;
+    }
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #222;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      filter: blur(12px) brightness(0.7); /* Blur 30% dan sedikit gelap */
+    }
+    .hero h1, .hero p, .hero .btn {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin: 15px 0;
+    }
+    .hero .btn {
+      background: #6c63ff;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .features {
+      padding: 80px 60px;
+      text-align: center;
+    }
+    .features h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .feature {
+      text-align: center;
+    }
+    .feature img {
+      height: 40px;
+      margin-bottom: 10px;
+    }
+    .highlight {
+      background: #1e1e2f;
+      color: #fff;
+      padding: 60px 0;
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      text-align: left;
+    }
+    .highlight div {
+      max-width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .highlight img {
+      margin-bottom: 18px;
+      height: 48px;
+    }
+    .highlight h4 {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .highlight p {
+      font-size: 1rem;
+      color: #d1d5db;
+      text-align: center;
+    }
+    .fast {
+      background: #6c63ff;
+      color: #fff;
+      text-align: center;
+      padding: 80px 0;
+    }
+    .fast h2 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+    .fast p {
+      font-size: 1.2rem;
+      color: #e0e7ff;
+    }
+    .pricing {
+      background: #1e1e2f;
+      color: #fff;
+      text-align: center;
+      padding: 80px 40px;
+    }
+    .pricing-cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .card {
+      background: #2a2a3d;
+      padding: 30px;
+      border-radius: 10px;
+      width: 250px;
+      text-align: center;
+    }
+    .card h3 {
+      margin-bottom: 10px;
+    }
+    .card p {
+      margin: 15px 0;
+      font-size: 0.9rem;
+    }
+    .card button {
+      background: #444;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    footer {
+      background: #f5f5f5;
+      padding: 50px 60px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    footer div {
+      margin: 10px;
+    }
+    footer input[type="email"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    footer button {
+      background: #6c63ff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"><strong>EMANATE</strong></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Style Guide</a>
+      <a href="#">Pricing</a>
+      <a href="#">Log In</a>
+      <a href="#" class="btn">Sign Up</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="Pemandangan_Gunung_Kerinci_01.jpg" alt="Background Image" class="hero-bg">
+    <h1>Emanate HTML Template</h1>
+    <p>A minimal and responsive HTML5 landing page built on lightweight, clean and customizable code.</p>
+    <a href="#" class="btn">Get started, it’s free!</a>
+  </section>
+
+  <section class="features">
+    <h2>Based On Modular Design</h2>
+    <p>Build awesome websites or landing pages with simple and independent parts.</p>
+    <div class="features-grid">
+      <div class="feature">
+        <img src="https://img.icons8.com/color/48/design.png"/>
+        <p>Minimal Design</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/color/48/rocket.png"/>
+        <p>Rocket Fast</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/color/48/framework.png"/>
+        <p>Custom Framework</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/color/48/document.png"/>
+        <p>Style Guide</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/color/48/source-code.png"/>
+        <p>CSS + SASS</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/color/48/settings.png"/>
+        <p>100% Customizable</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/color/48/modular.png"/>
+        <p>Modular Design</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/color/48/html-5.png"/>
+        <p>HTML5 Valid</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlight">
+    <div>
+      <img src="https://img.icons8.com/fluency/48/moon-symbol.png" alt="x2 Modules" />
+      <h4>x2 Modules</h4>
+      <p>Each module can easily be turned into a dark version by adding <b>.dark</b> as class.</p>
+    </div>
+    <div>
+      <img src="https://img.icons8.com/fluency/48/user-male-circle.png" alt="Onboarding Screens" />
+      <h4>Onboarding Screens</h4>
+      <p>Additional pages to log in, sign up as well as forgot password are included.</p>
+    </div>
+    <div>
+      <img src="https://img.icons8.com/fluency/48/settings.png" alt="Unlimited Possibilities" />
+      <h4>Unlimited Possibilities</h4>
+      <p>With a custom framework and global classes, build consistent pages with ease.</p>
+    </div>
+  </section>
+
+  <section class="fast">
+    <h2>And... fast. Really fast.</h2>
+    <p>The main focus of this template is performance, no bloat.</p>
+  </section>
+
+  <section class="pricing">
+    <h2>Or find the perfect paid plan for your business.</h2>
+    <p>Thousands of people rely on our service.</p>
+    <div class="pricing-cards">
+      <div class="card">
+        <h3>For Professionals</h3>
+        <h2>$10 <small>/mo</small></h2>
+        <p>Ut enim ad minima veniam, quis nostrum exercitationem.</p>
+        <button>Purchase</button>
+      </div>
+      <div class="card">
+        <h3>For Teams</h3>
+        <h2>$20 <small>/mo</small></h2>
+        <p>Ut enim ad minima veniam, quis nostrum exercitationem.</p>
+        <button>Purchase</button>
+      </div>
+      <div class="card">
+        <h3>For Enterprises</h3>
+        <h2>$50 <small>/mo</small></h2>
+        <p>Ut enim ad minima veniam, quis nostrum exercitationem.</p>
+        <button>Purchase</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <h4>Startup</h4>
+      <p>Getting Started<br>Resources<br>Design<br>Tutorials<br>Pricing</p>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <p>Documentation<br>Requirements<br>License<br>Updates<br>Contact</p>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <p>Twitter<br>Facebook<br>Instagram<br>Medium</p>
+    </div>
+    <div>
+      <h4>Join The Newsletter</h4>
+      <p>Get the latest news and resources right into your inbox every monday.</p>
+      <input type="email" placeholder="Your email...">
+      <button>Subscribe</button>
+    </div>
+  </footer>
+
+</body>
+</html>
